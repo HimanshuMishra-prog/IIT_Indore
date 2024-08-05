@@ -13,8 +13,8 @@ int isArmstrongNumber(int number) {
         sum += pow(digit, 3); 
         number /= 10;
     }
-    int ans = (sum == originalNumber);
-    return ans ;
+    if(sum == originalNumber){return 1;}
+    else {return 0;}
 }
 
 int main() {
