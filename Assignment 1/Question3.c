@@ -13,41 +13,36 @@ any further by analysis, even though it is known that the greatest number that c
 expressed as the sum of two abundant numbers is less than this limit. Find the sum of all
 the positive integers which cannot be written as the sum of two abundant numbers.*/
 
-// #include <stdio.h>
-// #include <math.h>
+#include <stdio.h>
+#include <math.h>
 
-// double calculateSeriesSum(double x, int n) {
-//     double sum = 0.0;
-//     double no=1.0;
-//     for (int i = 1; i <= n; i++) {
-//         no=no*x;
-//         double term = no / i;
-//         if (i % 2 == 0) {
-//             term = -term;
-//         }
-//         sum += term;
-//     }
-//     return sum;
-// }
+int divisorSum(int x) {
+    int sum = 0;
+    for (int i = 1; i*i <= x; i++) {
+        if (x % i == 0) {
+            sum = sum+i;
+            if(x/i != i && i != 1){
+                sum = sum + x/i;
+            }
+        }   
+    }
+    return sum;
+}
 
-// int main() {
-//     double x;
-//     int n;
-//     printf("Enter the value of x (-1 < x ≤ 1): ");
-//     scanf("%lf", &x);
-//     if (x <= -1 || x > 1) {
-//         printf("Error: x must be in the range (-1, 1].\n");
-//         return 1;
-//     }
+int main() {
+    int n;
+    printf("Enter the value to check :");
+    scanf("%d", &n);
+    int sum = divisorSum(n);
+    if(sum < n){
+        printf("The number is deficient");
+    }
+    else if(sum == n){
+        printf("The number is perfect");
+    }
+    else{
+        printf("The number is abundant");
+    }
 
-//     printf("Enter the value of n (n > 100): ");
-//     scanf("%d", &n);
-//     if (n <= 100) {
-//         printf("Error: n must be greater than 100.\n");
-//         return 1;
-//     }
-//     double sum = calculateSeriesSum(x, n);
-//     printf("The sum of the series is: %lf\n", sum);
-
-//     return 0;
-// }
+    return 0;
+}

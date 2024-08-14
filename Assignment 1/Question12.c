@@ -32,7 +32,7 @@ void unionSets(int *A, int n, int *B, int m) {
     }
     
     printf("Union: ");
-    printSet(unionSet, size);
+    outputValues(unionSet, size);
     
     free(unionSet);
 }
@@ -49,7 +49,7 @@ void intersectionSets(int *A, int n, int *B, int m) {
     }
     
     printf("Intersection: ");
-    printSet(interSet, size);
+    outputValues(interSet, size);
     
     free(interSet);
 }
@@ -57,7 +57,7 @@ void intersectionSets(int *A, int n, int *B, int m) {
 void differenceAB(int *A, int n, int *B, int m) {
     int *differenceSet = (int *)malloc(n * sizeof(int));
     int size = 0;
-    
+
     for (int i = 0; i < n; i++) {
         int found = 0;
         for (int j = 0; j < m; j++) {
@@ -72,7 +72,7 @@ void differenceAB(int *A, int n, int *B, int m) {
     }
     
     printf("A \\ B: ");
-    printSet(differenceSet, size);
+    outputValues(differenceSet, size);
     
     free(differenceSet);
 }
@@ -93,7 +93,7 @@ void differenceBA(int *A, int n, int *B, int m) {
     }
     
     printf("B \\ A: ");
-    printSet(differenceSet, size);
+    outputValues(differenceSet, size);
     
     free(differenceSet);
 }
@@ -102,6 +102,7 @@ void symmetricDifference(int *A, int n, int *B, int m) {
     int *unionSet = (int *)malloc((n + m) * sizeof(int));
     int *interSet = (int *)malloc((n < m ? n : m) * sizeof(int));
     int unionSize = 0, intersectionSize = 0;
+    
 
     for (int i = 0; i < n; i++) {
         unionSet[unionSize++] = A[i];
@@ -143,14 +144,14 @@ void symmetricDifference(int *A, int n, int *B, int m) {
     }
 
     printf("Symmetric Difference: ");
-    printSet(symmetricDiffSet, symDiffSize);
+    outputValues(symmetricDiffSet, symDiffSize);
 
     free(unionSet);
     free(interSet);
     free(symmetricDiffSet);
 }
 
-void printSet(int *set, int size) {
+void outputValues(int *set, int size) {
     for (int i = 0; i < size; i++) {
         printf("%d ", set[i]);
     }

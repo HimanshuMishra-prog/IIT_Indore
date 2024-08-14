@@ -10,21 +10,17 @@ int gcd(int a, int b) {
     return a;
 }
 
-int isCoprime(int a, int b) {
-    return gcd(a, b) == 1;
-}
-
 int main() {
-    int num1, num2;
+    int a,b;
     printf("Enter the integer: ");
-    scanf("%d", &num1);
+    scanf("%d", &a);
     printf("Enter the next integer: ");
-    scanf("%d", &num2);
+    scanf("%d", &b);
     
-    if (isCoprime(num1, num2)) {
-        printf("%d and %d are co-prime.\n", num1, num2);
+    if (gcd(a,b)==1) {
+        printf("%d and %d are co-prime.\n", a, b);
     } else {
-        printf("%d and %d are not co-prime.\n", num1, num2);
+        printf("%d and %d are not co-prime.\n", a, b);
     }
 
     return 0;

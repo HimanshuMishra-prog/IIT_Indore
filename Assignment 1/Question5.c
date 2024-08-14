@@ -36,10 +36,6 @@ int main() {
 
     printf("Enter the value of n: ");
     scanf("%d", &n);
-    if (n <= 100) {
-        printf("Error: n must be greater than 100.\n");
-        return 1;
-    }
     double total = calculateSeriestotal(x, n);
     printf("The total of the series is: %lf\n", total);
 

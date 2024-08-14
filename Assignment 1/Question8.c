@@ -27,13 +27,13 @@ void checkTriangleType(double a, double b, double c) {
 int main() {
     double x1, y1, x2, y2, x3, y3;
 
-    printf("Enter the coordinates of the first point (x1, y1): ");
+    printf("Enter first cordinate points: ");
     scanf("%lf %lf", &x1, &y1);
 
-    printf("Enter the coordinates of the second point (x2, y2): ");
+    printf("Enter second coordinate points: ");
     scanf("%lf %lf", &x2, &y2);
 
-    printf("Enter the coordinates of the third point (x3, y3): ");
+    printf("Enter third coordinate points: ");
     scanf("%lf %lf", &x3, &y3);
 
     double side1 = distance(x1, y1, x2, y2);

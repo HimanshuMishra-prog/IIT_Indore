@@ -26,11 +26,6 @@ int main() {
     printf("Enter the size of the array: ");
     scanf("%d", &size);
 
-    if (size < 2) {
-        printf("Array should contain at least two elements.\n");
-        return 1;
-    }
-
     int arr[size];
     printf("Enter the elements of the array:\n");
     for (int i = 0; i < size; i++) {
