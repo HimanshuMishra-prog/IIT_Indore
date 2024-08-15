@@ -1,0 +1,16 @@
+[
+	{
+		"password": "123",
+		"roomNumber": -1,
+		"isRoomAlloted": false,
+		"name": "Himanshu",
+		"id": 1
+	},
+	{
+		"password": "123",
+		"roomNumber": 101,
+		"isRoomAlloted": true,
+		"name": "Sudhanshu",
+		"id": 2
+	}
+]

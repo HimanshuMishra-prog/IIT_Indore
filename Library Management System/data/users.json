@@ -1,0 +1,21 @@
+[
+    {
+        "password": "123",
+        "name": "Admin User",
+        "id": "admin1",
+        "type": "Admin"
+    },
+    {
+        "password": "123",
+        "name": "mark",
+        "id": "lib1",
+        "type": "Librarian"
+    },
+    {
+        "password": "123",
+        "isSuspended": false,
+        "name": "himanshu",
+        "id": "m1",
+        "type": "Member"
+    }
+]
