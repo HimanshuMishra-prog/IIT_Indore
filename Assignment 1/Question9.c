@@ -9,7 +9,6 @@ Note: Inputs represent the following equations: y = x + 7; y = −x + 5*/
 int main() {
     int m1, c1, m2, c2;
 
-    // Input slopes and intercepts
     printf("Enter the m and c of the first line: ");
     scanf("%lf %lf", &m1, &c1);
     printf("Enter the m and c of e second line: ");
