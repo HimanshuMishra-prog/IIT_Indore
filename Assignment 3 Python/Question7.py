@@ -12,7 +12,6 @@ def extract_emails(file_path):
     email_pattern = r'^[a-zA-Z0-9_.+$%-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$'
     email_regex = re.compile(email_pattern)
 
-    # Initialize a defaultdict to store usernames by domain
     domain_usernames = defaultdict(list)
 
     try:

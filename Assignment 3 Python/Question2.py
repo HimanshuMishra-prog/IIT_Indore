@@ -20,6 +20,8 @@ def measure_execution_time():
     size = 10**6  
     v1 = np.random.randint(0,100,size)
     v2 = np.random.randint(0,100,size)
+    print(f"First vector is: {v1}")
+    print(f"Second vector is: {v2}")
 
     start_time = time.time()
     result_vectorized = dot_product_vectorized(v1, v2)

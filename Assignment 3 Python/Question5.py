@@ -10,18 +10,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def svd_operations(A, k_values):
-    """
-    Perform Singular Value Decomposition (SVD) and low-rank approximation on a matrix A,
-    and plot the reconstruction errors for different values of k.
-
-    Parameters:
-    - A: The input matrix to decompose.
-    - k_values: List of integers representing different values of k for low-rank approximation.
-    
-    Returns:
-    - None (prints results and plots)
-    """
+def svd_operations(A, k_values): 
     U, S, VT = np.linalg.svd(A, full_matrices=False)
     Sigma = np.diag(S)
     A_reconstructed = np.dot(U, np.dot(Sigma, VT))
@@ -47,14 +36,14 @@ def svd_operations(A, k_values):
     plt.figure(figsize=(10, 6))
     plt.plot(k_values, errors, marker='o', linestyle='-', color='r')
     plt.xlabel('Number of Singular Values (k)')
-    plt.ylabel('Reconstruction Error')
-    plt.title('Reconstruction Error vs. Number of Singular Values')
+    plt.ylabel('Error Reconstruction')
+    plt.title('Reconstruction Error Plot On Singular values')
     plt.grid(True)
     plt.show()
 
 
 if __name__ == "__main__":
     np.random.seed(0)
-    A = np.random.rand(100, 100)
+    A = np.random.randint(0, 100, (100, 100))
     k_values = [1, 5, 10, 20]
     svd_operations(A, k_values)

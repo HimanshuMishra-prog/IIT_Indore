@@ -11,8 +11,8 @@ import numpy as np
 
 def matrixOperations():
     size = 1000
-    A = np.random.randint(0,100, size)
-    B = np.random.randint(0,100, size)
+    A = np.random.randint(0,100, (size, size))
+    B = np.random.randint(0,100, (size, size))
     print(f"The first matrix is: {A}")
     print(f"The second matrix is: {B}")
     addition = A + B
