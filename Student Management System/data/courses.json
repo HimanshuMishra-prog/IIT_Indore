@@ -1,0 +1,14 @@
+[
+    {
+        "code": "CS101",
+        "title": "Introduction to Computer Science",
+        "enrolled": 1,
+        "capacity": 30
+    },
+    {
+        "code": "MA202",
+        "title": "Calculus II",
+        "enrolled": 0,
+        "capacity": 25
+    }
+]
